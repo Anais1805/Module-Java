@@ -11,8 +11,8 @@ public class ChaineDeCaracteres {
         System.out.println(coucou + ' ' + grumpf);
         System.out.println(grumpf.substring(4, 5));
         System.out.println(grumpf.length());
-        System.out.println(grumpf.substring(13, 23).toUpperCase());
-   
+        System.out.println(grumpf.substring(0, 12) + ' ' + grumpf.substring(13, 23).toUpperCase());
+       
     }
 
 }
