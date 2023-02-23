@@ -7,11 +7,11 @@ public class Bateau {
 
 // Construction d'un constructeur
     public Bateau(){
-        System.out.println("Coucou");
+        System.out.println("Bateau créé!");
     }
 
     public Bateau(String nouveauNom) {
-         nom = nouveauNom;
+      nom = nouveauNom;
 
     }
     // Ici, ce constructeur permet de construire un bateau en renseignant directement son nom``

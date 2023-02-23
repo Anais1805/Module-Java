@@ -38,5 +38,6 @@ public class SimulationBateau {
         }
         System.out.println(Arrays.toString(mesBateaux));
 
+        Avion monAvion = new Avion();
     }
 }
