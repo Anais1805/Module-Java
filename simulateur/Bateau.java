@@ -33,7 +33,7 @@ public Bateau(String nom, Coque coque, Moteur moteur){
     this.nom = nom;
     this.coque = coque;
     this.moteur = moteur;
-    this.nombreDeBateauxConstruits = this.nombreDeBateauxConstruits + 1;
+    this.nombreDeBateauxConstruits += 1;
     System.out.println("Nombre de bateaux construits : " + nombreDeBateauxConstruits);
 
 }

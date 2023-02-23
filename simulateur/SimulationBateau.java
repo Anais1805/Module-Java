@@ -33,30 +33,30 @@ public class SimulationBateau {
       
  
 
-    //      Bateau[] mesBateaux = new Bateau[5];
-    //     mesBateaux[0] = new Bateau("Le France", 90, 150, 30);
-    //     mesBateaux[1] = new Bateau("Queen Mary", 50, 200, 50);
-    //     mesBateaux[2] = new Bateau("Charles De Gaulles", 150, 300, 40);
-    //     mesBateaux[3] = new Bateau("Maréchal Leclerc", 80, 400, 30);
-    //     mesBateaux[4] = new Bateau("Brittania", 100, 500, 90);
+         Bateau[] mesBateaux = new Bateau[5];
+        mesBateaux[0] = new Bateau("Le France", maCoque, monMoteur);
+        mesBateaux[1] = new Bateau("Queen Mary", maCoque, monMoteur);
+        mesBateaux[2] = new Bateau("Charles De Gaulles", maCoque, monMoteur);
+        mesBateaux[3] = new Bateau("Maréchal Leclerc", maCoque, monMoteur);
+        mesBateaux[4] = new Bateau("Brittania", maCoque, monMoteur);
 
-    //     for (Bateau bateau : mesBateaux) {
-    //         bateau.navigue(50);
-    //         bateau.arriveAuPort();
-    //     }
-    //     Bateau[] mesAutresBateaux = new Bateau[5];
-    //     int compteur = 0;
-    //     while (compteur < 5) {
-    //         Bateau bateau = new Bateau("LeFrance " + compteur, 90, 200, 50);
-    //         mesAutresBateaux[compteur] = bateau;
-    //         mesAutresBateaux[compteur].navigue(300);
-    //         mesAutresBateaux[compteur].navigue(500);
-    //         mesAutresBateaux[compteur].arriveAuPort();
+        for (Bateau bateau : mesBateaux) {
+            bateau.navigue(50);
+            bateau.arriveAuPort();
+        }
+        Bateau[] mesAutresBateaux = new Bateau[5];
+        int compteur = 0;
+        while (compteur < 5) {
+            Bateau bateau = new Bateau("LeFrance " + compteur, maCoque, monMoteur);
+            mesAutresBateaux[compteur] = bateau;
+            mesAutresBateaux[compteur].navigue(300);
+            mesAutresBateaux[compteur].navigue(500);
+            mesAutresBateaux[compteur].arriveAuPort();
 
-    //         compteur++;
-    //     }
-    //     System.out.println(Arrays.toString(mesAutresBateaux));
+            compteur++;
+        }
+        System.out.println(Arrays.toString(mesAutresBateaux));
 
-    //     Avion monAvion = new Avion();
+        Avion monAvion = new Avion();
      }
 }
