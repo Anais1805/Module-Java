@@ -2,29 +2,39 @@ package simulateur;
 
 public class Bateau {
     private static int nombreDeBateauxConstruits;
-    private String nom = "Queen Mary";
+    private final String nom;
+
+    public Coque getCoque() {
+        return coque;
+    }
+    public void setCoque(Coque coque) {
+        this.coque = coque;
+    }
     private double milesParcourus;
+    private Coque coque;
 
-// Construction d'un constructeur
-    public Bateau(){
-        System.out.println("Bateau créé!");
-    }
-
-    public Bateau(String nouveauNom) {
-      nom = nouveauNom;
-
-    }
     // Ici, ce constructeur permet de construire un bateau en renseignant directement son nom``
     //pas mal du tout quand on veut donner un nom à chaque bateau d'une boucle for-each
+    // public Bateau(String nouveauNom){
+    //     this.nom = nouveauNom;
+    //     this.nombreDeBateauxConstruits = this.nombreDeBateauxConstruits+1;
+    //     System.out.println("Nombre de bateaux construits : " + nombreDeBateauxConstruits);
+    // }
+        public Bateau(String nom, int ptDeVieMaxCoque) {
+        this.nom = nom;
+        this.coque = new Coque(ptDeVieMaxCoque);
+        this.nombreDeBateauxConstruits = this.nombreDeBateauxConstruits+1;
+        System.out.println("Nombre de bateaux construits : " + nombreDeBateauxConstruits);
+    
+
+    }
     public static int getNombreDeBateauxConstruits() {
         return nombreDeBateauxConstruits;
     }
     public String getNom(){
         return nom;
     }
-    public void setNom(String nouveauNom){
-        this.nom = nouveauNom;
-    }
+
     public boolean prendLaMer(){
         return true;
     }
@@ -40,4 +50,7 @@ public class Bateau {
     public String toString() {
        return nom + " : super bateau !";
     }
+
+    
 }
+
