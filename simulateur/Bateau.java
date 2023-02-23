@@ -4,21 +4,6 @@ import simulateur.piece.Coque;
 import simulateur.piece.Moteur;
 
 public class Bateau {
-    public static void setNombreDeBateauxConstruits(int nombreDeBateauxConstruits) {
-        Bateau.nombreDeBateauxConstruits = nombreDeBateauxConstruits;
-    }
-    public Moteur getMoteur() {
-        return moteur;
-    }
-    public void setMoteur(Moteur moteur) {
-        this.moteur = moteur;
-    }
-    public double getMilesParcourus() {
-        return milesParcourus;
-    }
-    public void setMilesParcourus(double milesParcourus) {
-        this.milesParcourus = milesParcourus;
-    }
     private static int nombreDeBateauxConstruits;
     private final String nom;
     private double milesParcourus;
@@ -36,13 +21,28 @@ public class Bateau {
     // nombreDeBateauxConstruits);
     // }
 
-    public Bateau(String nom, int ptDeVieMaxCoque, int puissance, int consommation) {
-        this.nom = nom;
-        this.coque = new Coque(ptDeVieMaxCoque);
-        this.moteur = new Moteur(puissance, consommation);
-        this.nombreDeBateauxConstruits = this.nombreDeBateauxConstruits + 1;
-        System.out.println("Nombre de bateaux construits : " + nombreDeBateauxConstruits);
+    // public Bateau(String nom, int ptDeVieMaxCoque, int puissance, int consommation) {
+    //     this.nom = nom;
+    //     this.coque = new Coque(ptDeVieMaxCoque);
+    //     this.moteur = new Moteur(puissance, consommation);
+    //     this.nombreDeBateauxConstruits = this.nombreDeBateauxConstruits + 1;
+    //     System.out.println("Nombre de bateaux construits : " + nombreDeBateauxConstruits);
 
+    // }
+public Bateau(String nom, Coque coque, Moteur moteur){
+    this.nom = nom;
+    this.coque = coque;
+    this.moteur = moteur;
+    this.nombreDeBateauxConstruits = this.nombreDeBateauxConstruits + 1;
+    System.out.println("Nombre de bateaux construits : " + nombreDeBateauxConstruits);
+
+}
+    public double getMilesParcourus() {
+        return milesParcourus;
+    }
+
+    public void setMilesParcourus(double milesParcourus) {
+        this.milesParcourus = milesParcourus;
     }
     public Coque getCoque() {
         return coque;
@@ -51,7 +51,14 @@ public class Bateau {
         this.coque = coque;
     }
 
-    
+    public Moteur getMoteur() {
+        return moteur;
+    }
+
+    public void setMoteur(Moteur moteur) {
+        this.moteur = moteur;
+    }
+
 
     public static int getNombreDeBateauxConstruits() {
         return nombreDeBateauxConstruits;
