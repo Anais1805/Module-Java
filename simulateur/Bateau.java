@@ -1,10 +1,24 @@
 package simulateur;
 
 public class Bateau {
+    private static int nombreDeBateauxConstruits;
     private String nom = "Queen Mary";
     private double milesParcourus;
-    private static int nombreDeBateauxConstruits;
 
+// Construction d'un constructeur
+    public Bateau(){
+        System.out.println("Coucou");
+    }
+
+    public Bateau(String nouveauNom) {
+         nom = nouveauNom;
+
+    }
+    // Ici, ce constructeur permet de construire un bateau en renseignant directement son nom``
+    //pas mal du tout quand on veut donner un nom à chaque bateau d'une boucle for-each
+    public static int getNombreDeBateauxConstruits() {
+        return nombreDeBateauxConstruits;
+    }
     public String getNom(){
         return nom;
     }

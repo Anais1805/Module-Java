@@ -12,12 +12,14 @@ public class SimulationBateau {
         monBateau.navigue(500);
         monBateau.arriveAuPort();
 
+ 
+
         Bateau[] mesBateaux = new Bateau[5];
-        mesBateaux[0] = new Bateau();
-        mesBateaux[1] = new Bateau();
-        mesBateaux[2] = new Bateau();
-        mesBateaux[3] = new Bateau();
-        mesBateaux[4] = new Bateau();
+        mesBateaux[0] = new Bateau("Le France");
+        mesBateaux[1] = new Bateau("Queen Mary");
+        mesBateaux[2] = new Bateau("Charles De Gaulles");
+        mesBateaux[3] = new Bateau("Maréchal Leclerc");
+        mesBateaux[4] = new Bateau("Brittania");
 
         for (Bateau bateau : mesBateaux) {
             bateau.navigue(50);
