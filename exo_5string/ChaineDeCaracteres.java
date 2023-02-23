@@ -9,6 +9,10 @@ public class ChaineDeCaracteres {
         String grumpf = "What's wrong with you";
         // Affichage de : "Hey ? What's wrong with you ?" dans la console
         System.out.println(coucou + ' ' + grumpf);
+        System.out.println(grumpf.substring(4, 5));
+        System.out.println(grumpf.length());
+        System.out.println(grumpf.substring(11, 21).toUpperCase());
+   
     }
 
 }
