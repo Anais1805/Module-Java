@@ -1,9 +1,9 @@
-package simulateur;
+package simulateur.piece;
 public class Coque {
     private int pointsDeVie;
     private int pointsDeVieMax;
 
-    
+
     public Coque(int pointsDeVieMax) {
         this.pointsDeVie = pointsDeVieMax;
         this.pointsDeVieMax = pointsDeVieMax;
