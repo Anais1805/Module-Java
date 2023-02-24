@@ -16,7 +16,20 @@ public class ExoConditions {
         System.out.println("Veuillez entrer un entier c");
         int c = scannerClavier.nextInt();
         scannerClavier.nextLine();
+        System.out.println("Veuillez entrer un entier d");
+        int d = scannerClavier.nextInt();
+        scannerClavier.nextLine();
 
+        //Bonus : 
+        if (a > b && a > c && a>d) {
+            System.out.println(a);
+        } else if (b > c && b > a && b>d) {
+            System.out.println(b);
+        }else if (c > a  && c > b && c>d) {
+            System.out.println(c);
+        } else {
+            System.out.println(d);
+        }
         // Chercher le maximum entre a et b (ne faîtes pas ça chez vous, il
         // y a beaucoup mieux en mode 'Programmation Orientée Objet')
         // et afficher le résultat

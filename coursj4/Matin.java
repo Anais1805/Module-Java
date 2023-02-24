@@ -3,12 +3,15 @@ package coursj4;
 import java.util.Scanner;
 public class Matin {
     // type primitif et wrapper
-    int a = scannerClavier.nextInt();
-        scannerClavier.nextLine();
     public static void main(String[] args) {
         for (int i = 5; i < 10; i++) {
             System.out.println(i);
         }
+        //permet d'entrer qqch dans la console (comme prompt)
+        Scanner scannerClavier = new Scanner(System.in);
+        System.out.println("Veuillez entrer un entier a");
+        int a = scannerClavier.nextInt();
+        scannerClavier.nextLine();
 
         // boucle while
         int j = 15;
