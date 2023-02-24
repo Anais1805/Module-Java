@@ -21,6 +21,7 @@ public class BateauCivil extends Bateau {
         System.out.println("Je transporte : " + nombreCivil + " passagers");
     }
 
+    @Override
     public boolean prendLaMer() {
         boolean appelClasseMere = super.prendLaMer();
         // important d'expliciter avec super que l'on execute
@@ -29,12 +30,13 @@ public class BateauCivil extends Bateau {
         // boucle infinie = erreur
         return true;
     }
-
+    @Override
     public void navigue(double miles) {
         System.out.println("Je navigue et je suis un bateau civil");
         super.navigue(miles);
     }
 
+    @Override
     public void arriveAuPort() {
         System.out.println(
                 "Je suis le " + nom + ", bateau civil de première classe. "
