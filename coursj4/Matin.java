@@ -3,21 +3,24 @@ package coursj4;
 public class Matin {
     //type primitif et wrapper
     public static void main(String[]args){
-    int monInt = 4;
-    Integer monInstanceDeInt = Integer.valueOf(4);
+        for(int i = 5; i<10; i++){
+            System.out.println(i);
+        }
 
-    Integer nouvelInt = 5;
-    byte conversionEnByte = nouvelInt.byteValue();
+        // boucle while
+        int j = 15;
+        while(j < 20){
+            System.out.println(j);
+            j++;
+        }
 
-    //boxing d'un boulean 
-    Boolean monBooleen = true;
-    Double pi = 3.14;
-
-    int somme = monInstanceDeInt.intValue() + nouvelInt.intValue();
-    // ligne un peu lourde par le unboxing on peut écrire directement
-    int somme1 = monInstanceDeInt + nouvelInt;
-    // somme 1 appelle les mêmes méthodes  de manière cachée.
-    int maValeur = Integer.parseInt("43");
-
+        //boucle do while
+        int k = 0;
+        do {
+            System.out.println("Mon compteur est de : " + k);
+            System.out.println("coucou");
+            k++;
+        } while(k<5);
     }
+    
 }
