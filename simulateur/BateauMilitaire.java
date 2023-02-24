@@ -5,14 +5,25 @@ import simulateur.piece.Moteur;
 
 public class BateauMilitaire extends Bateau {
 
-    int forceCanon;
+    private int forceCanon;
 
     public BateauMilitaire(String nom, Coque coque, Moteur moteur) {
         super(nom, coque, moteur);
-        //TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub
+    }
+    
+    public int getForceCanon() {
+        return forceCanon;
     }
 
-    @Override
+    public void setForceCanon(int forceCanon) {
+        this.forceCanon = forceCanon;
+    }
+
+    public void attaque(Bateau cible) {
+        System.out.println("J'attaque " + cible);
+    }
+
     public boolean prendLaMer() {
         boolean appelClasseMere = super.prendLaMer();
         // important d'expliciter avec super que l'on execute
@@ -23,27 +34,22 @@ public class BateauMilitaire extends Bateau {
     }
 
     @Override
-    public void navigue(double miles) {
-        milesParcourus += miles;
-        System.out.println("Je navigue et je suis un bateau militaire");
-    }
-
-    @Override
     public void arriveAuPort() {
+        // TODO Auto-generated method stub
+
         System.out.println(
                 "Je suis le " + nom + ", bateau militaire de première classe. "
                         + "J'arrive au port. J'ai parcouru au total :" + milesParcourus + " miles");
-        milesParcourus = 0;
+        super.arriveAuPort();
     }
 
-    public int getForceCanon() {
-        return forceCanon;
+    @Override
+    public void navigue(double miles) {
+        // TODO Auto-generated method stub
+
+        System.out.println("Je navigue et je suis un bateau militaire");
+        super.navigue(miles);
     }
 
-    public void setForceCanon(int forceCanon) {
-        this.forceCanon = forceCanon;
-    }
-    public void attaque(Bateau cible){
-        System.out.println("J'attaque " + cible);
-    }
+    
 }
