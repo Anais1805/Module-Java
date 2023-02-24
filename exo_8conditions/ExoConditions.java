@@ -20,16 +20,7 @@ public class ExoConditions {
         int d = scannerClavier.nextInt();
         scannerClavier.nextLine();
 
-        //Bonus : 
-        if (a > b && a > c && a>d) {
-            System.out.println(a);
-        } else if (b > c && b > a && b>d) {
-            System.out.println(b);
-        }else if (c > a  && c > b && c>d) {
-            System.out.println(c);
-        } else {
-            System.out.println(d);
-        }
+       
         // Chercher le maximum entre a et b (ne faîtes pas ça chez vous, il
         // y a beaucoup mieux en mode 'Programmation Orientée Objet')
         // et afficher le résultat
@@ -38,6 +29,10 @@ public class ExoConditions {
         } else {
             System.out.println(b);
         }
+        //Renvoie le max de A et B
+        int leMax = Math.max(a,b);
+        int leMaxDesTrois = Math.max(a, Math.max(b,c));
+
 
         // Chercher le maximum entre a,b et c
         // et afficher le résultat8
@@ -65,6 +60,17 @@ public class ExoConditions {
         // Fermeture des ressources (il y a mieux pour ce faire, mais nous verrons cela
         // plus tard)
         scannerClavier.close();
+
+        // Bonus :
+        if (a > b && a > c && a > d) {
+            System.out.println(a);
+        } else if (b > c && b > a && b > d) {
+            System.out.println(b);
+        } else if (c > a && c > b && c > d) {
+            System.out.println(c);
+        } else {
+            System.out.println(d);
+        }
     }
 
 }

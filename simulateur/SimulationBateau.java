@@ -4,13 +4,11 @@ import java.util.Arrays;
 import simulateur.piece.Coque;
 import simulateur.piece.Moteur;
 
-
-
 public class SimulationBateau {
     Bateau bateau;
 
     public static void main(String[] args) {
-        
+
         Coque maCoque = new Coque(16);
         Moteur monMoteur = new Moteur(10, 12);
         Bateau monBateau = new Bateau("Le Queen Mary", maCoque, monMoteur);
@@ -20,20 +18,17 @@ public class SimulationBateau {
         monBateau.arriveAuPort();
 
         // System.out.println(monBateau.getCoque());
-        // Coque maCoque  = new Coque(17);
+        // Coque maCoque = new Coque(17);
         // //je construis ma coque
-        //  monBateau.setCoque(maCoque);
-         //Je la lie à mon bateau en mettant à jour l'attribut coque
-         //cet attribut est un objet, c'est pour cela qu'il faut le créer en premier
-         // de la classe Bateau avec cette coque en particulier.
-         System.out.println("Ma coque a : " + monBateau.getCoque().getPointsDeVie() + " points de vie");
-         System.out.println("Ma puissance est de : " + monBateau.getMoteur().getPuissance());
-         System.out.println("Ma consommation est de : " + monBateau.getMoteur().getConsommation());
-    
-      
- 
+        // monBateau.setCoque(maCoque);
+        // Je la lie à mon bateau en mettant à jour l'attribut coque
+        // cet attribut est un objet, c'est pour cela qu'il faut le créer en premier
+        // de la classe Bateau avec cette coque en particulier.
+        System.out.println("Ma coque a : " + monBateau.getCoque().getPointsDeVie() + " points de vie");
+        System.out.println("Ma puissance est de : " + monBateau.getMoteur().getPuissance());
+        System.out.println("Ma consommation est de : " + monBateau.getMoteur().getConsommation());
 
-         Bateau[] mesBateaux = new Bateau[5];
+        Bateau[] mesBateaux = new Bateau[5];
         mesBateaux[0] = new Bateau("Le France", maCoque, monMoteur);
         mesBateaux[1] = new Bateau("Queen Mary", maCoque, monMoteur);
         mesBateaux[2] = new Bateau("Charles De Gaulles", maCoque, monMoteur);
@@ -58,5 +53,31 @@ public class SimulationBateau {
         System.out.println(Arrays.toString(mesAutresBateaux));
 
         Avion monAvion = new Avion();
-     }
+
+        System.out.println();
+       
+
+        // cast permet de changer un type Bateau en type BateauCivil si cela est possible
+        BateauCivil bateau2 = new BateauCivil("Le Nautilius", maCoque, monMoteur);
+        Bateau bateauCache = bateau2;
+        if(bateauCache instanceof BateauCivil){
+            BateauCivil lePaquebotCache = (BateauCivil) bateauCache; 
+        }
+        BateauCivil nouveauBateau = new BateauCivil("Bateau Civil", maCoque, monMoteur);
+        nouveauBateau.prendLaMer();
+        nouveauBateau.setNombreCivil(20);
+        nouveauBateau.navigue(200);
+        nouveauBateau.arriveAuPort();
+
+        System.out.println();
+        BateauMilitaire newBoat = new BateauMilitaire("LePrince", maCoque, monMoteur);
+        newBoat.prendLaMer();
+        newBoat.navigue(500);
+        newBoat.arriveAuPort();
+        
+        System.out.println("Bilan du controleur");
+        Controleur nouveauControleur = new Controleur();
+        nouveauControleur.controle(newBoat);
+
+    }
 }

@@ -5,8 +5,8 @@ import simulateur.piece.Moteur;
 
 public class Bateau {
     private static int nombreDeBateauxConstruits;
-    private final String nom;
-    private double milesParcourus;
+    protected final String nom;
+    protected double milesParcourus;
     private Coque coque;
     private Moteur moteur;
 
