@@ -31,6 +31,10 @@ public class Boucles {
                 System.out.println(m);
             }
         }
+        //deuxième possibilité
+        for(int n =15; n>28; n +=2){
+            System.out.println(n);
+        }
        
     }
 
