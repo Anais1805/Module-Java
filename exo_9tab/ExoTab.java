@@ -5,6 +5,20 @@ import java.util.Random;
 public class ExoTab {
     public static void main(String[] args) {
 
+        int[] tab = {1, 1, 2, 3, 5, 8, 13, 21};
+        int[] tab2  = new int[tab.length+1];
+        for(int i = 0; i<tab.length; i++){
+            System.out.println("Premier tab : " +tab[i]);
+            tab2[i] = tab[i];
+            tab2[2] = new Random().nextInt() * 100;
+        }
+        
+        for (int i = 0; i < tab2.length; i++) {
+            System.out.println("Deuxieme tab : " +tab2[i]);
+        }
+       
+
+
         // L'instruction ci-dessous génère un float aléatoire de 0 à 100.
         float randomFloat = new Random().nextFloat() * 100;
 
