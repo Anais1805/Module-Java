@@ -50,5 +50,10 @@ public class Matin {
                 // echiquuer [i][j] = j'accède à la valeur j de la colonne i
             }
         }
+
+        //Boucle for-each mais on perd l'index
+        for (String machaine: mesChaines){
+            System.out.println(machaine);
+        }
     }
 }
