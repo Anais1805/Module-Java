@@ -22,14 +22,14 @@ public class map {
         System.out.println("Taille :" + mesChaines.size());
         // Affichage d'une définition d'un mot
         System.out.println("Definition : " + mesChaines.get("lion"));
-        Set<String> def = mesChaines.keySet();
        // Affichage de chaque définition avec sa clé et sa valeur
-      for(Map.Entry mapentry : mesChaines.entrySet())
-        System.out.println("La définition de " + mapentry.getKey() + " est " + mapentry.getValue());
-    
-
+        for(Map.Entry entrees : mesChaines.entrySet()){
+        System.out.println("La définition de " + entrees.getKey() + " est " + entrees.getValue());}
         // Suppression d'un élément de la map
         mesChaines.remove("abeilles");
+        for (Map.Entry entrees : mesChaines.entrySet()) {
+            System.out.println("La définition de " + entrees.getKey() + " est " + entrees.getValue());
+        }
 
     }
 }
