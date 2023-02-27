@@ -12,8 +12,7 @@ public class ExoTab {
         float[] myFloats = new float[10];
         for(int i = 0; i<myFloats.length; i++){
             // Le remplir avec des float aléatoires
-            float randomFloatt = new Random().nextFloat() * 100;
-            myFloats[i] = randomFloatt;
+            myFloats[i] = new Random().nextFloat() * 100;
             // Afficher le résultat sur la console
             System.out.println("Mes chiffres aléatoires sont : " + myFloats[i]);
         }
