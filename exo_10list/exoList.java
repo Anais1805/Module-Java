@@ -16,7 +16,6 @@ public class exoList {
 
         // Afficher la taille de la liste
        System.out.println("Taille : " + maListe.size());
-       
         // Ajout d'élément à un index donné
         maListe.add(1, 12);
         // Affichage de la liste (parcours de chaque élément)
@@ -29,14 +28,9 @@ public class exoList {
         for (Integer inte : maListe) {
             System.out.println("Deuxième boucle : " + inte);
         }
-        
-        
 
-        
+        List maNouvelleListe = new ArrayList<>();
 
-        
-
-        
 
     }
 }
