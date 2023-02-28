@@ -1,6 +1,8 @@
 package exo_13streams;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Streams {
@@ -22,18 +24,21 @@ public class Streams {
         superList.stream().forEach(s -> System.out.println(s));
 
         // Tri des entreprises par chiffre d'affaires décroissant
-        // superList.stream().sorted().forEach(s -> System.out.println("Trié" + s.getChiffreAffaires()));
+ 
+        superList.stream().sorted((Entreprise e1, Entreprise e2) -> {
+            return e1.getChiffreAffaires().compareTo(e2.getChiffreAffaires());
+        });
         // On n'affiche que les trois entreprises ayant le plus grand chiffre d'affaires
         superList.stream().limit(3).forEach(s -> System.out.println("limit 3 " + s));
         // On n'affiche que les trois entreprises ayant le plus grand chiffre
         // d'affaires,
         // mais en ne prenant en compte que les entreprises actives
-
+        superList.stream().filter(s -> s.isActif() == true).limit(3).forEach(s -> System.out.println("3 actifs :  " + s));
 
         // On n'affiche que l'entreprise ayant le plus petit chiffre d'affaires
-
+       
         // Affichage uniquement des chiffres d'affaires (en utilisant mapToInt)
-
+        
         // Calcul du chiffre d'affaires moyen
 
         // Calcul du chiffres d'affaires moyen d'entreprises actives
