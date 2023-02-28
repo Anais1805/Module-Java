@@ -17,6 +17,11 @@ public double getMilesParcourus() throws BateauCouleException {
     } 
     return milesParcourus;
     }
+    
+    public double getMilesParcourus1() {
+       
+        return milesParcourus;
+    }
 
     public int getAgeCoque() throws Exception {
         if(ageCoque == 0){
