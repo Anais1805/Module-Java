@@ -22,9 +22,9 @@ public class Streams {
         superList.stream().forEach(s -> System.out.println(s));
 
         // Tri des entreprises par chiffre d'affaires décroissant
-        superList.stream().sorted().forEach(s -> System.out.println("Trié" + s.getChiffreAffaires()));
+        // superList.stream().sorted().forEach(s -> System.out.println("Trié" + s.getChiffreAffaires()));
         // On n'affiche que les trois entreprises ayant le plus grand chiffre d'affaires
-        superList.stream().limit(3);
+        superList.stream().limit(3).forEach(s -> System.out.println("limit 3 " + s));
         // On n'affiche que les trois entreprises ayant le plus grand chiffre
         // d'affaires,
         // mais en ne prenant en compte que les entreprises actives
