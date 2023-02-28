@@ -1,13 +1,15 @@
 package simulateur;
 
 import java.util.Arrays;
+
+
 import simulateur.piece.Coque;
 import simulateur.piece.Moteur;
 
 public class SimulationBateau {
     Bateau bateau;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         Coque maCoque = new Coque(16);
         Moteur monMoteur = new Moteur(10, 12);
@@ -81,11 +83,41 @@ public class SimulationBateau {
 
         System.out.println(newBoat.getNom().compareTo(bateau2.getNom()));
 
+        newBoat.setAgeCoque(18);
+
+// Premiere manière de gérer les exceptions
 try{
-    int ageCoque = newBoat.getAgeCoque();
-    System.out.println("L'âge de la coque est = " + ageCoque);
+    int ageCoque = nouveauBateau.getAgeCoque();
+    System.out.println("L'âge de la coque est : " + ageCoque);
 } catch (Exception monException){
     System.out.println(monException.getMessage());
+} //on peut enchainer les catch autant que l'on veut
+//ce catch sera appelé si aucun précédent n'est appelé
+// et si aucune exception plus spécifique n'est appelée.
+catch (Throwable e ){
+    System.out.println("coucou"  + e.getMessage());
+}
+
+//Deuxième manière : on rencoie l'erreur a la méthode qui l'a appelé
+//on ajoute throws Exception à main ici puisque c'est la méthode qui lance l'actoin
+    newBoat.getAgeCoque();
+//Attention cela foncitonne car une Exception est throws dans la méthode getCoque()
+   
+try {
+    int ageCoque = bateau2.getAgeCoque();
+    System.out.println("L'âge de la coque est : " + ageCoque);
+} catch (Throwable e) {
+    // dans les parenthèses de Catch, je peux mettre toutes les classes Throwable
+    System.out.println("Hello"  + e.getMessage());
+}
+
+
+try{
+    monBateau.setMilesParcourus(200);
+    double mesMiles = monBateau.getMilesParcourus();
+    System.out.println( monBateau.getNom() + " a parcouru " + mesMiles);
+}catch (BateauCouleException e){
+    System.out.println(e.getMessage());
 }
     }
 }

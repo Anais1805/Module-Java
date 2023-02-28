@@ -4,13 +4,26 @@ import simulateur.piece.Coque;
 import simulateur.piece.Moteur;
 
 public class Bateau implements Comparable<Bateau> {
+   
+    
+   public static int getNombreDeBateauxConstruits() throws BateauCouleException {
+      return nombreDeBateauxConstruits;
+   }
+
+
+public double getMilesParcourus() throws BateauCouleException {
+    if (milesParcourus == 0) {
+        throw new BateauCouleException("Aucun mile n'a été parcouru par ce bateau");
+    } 
+    return milesParcourus;
+    }
+
     public int getAgeCoque() throws Exception {
-        if(true){
+        if(ageCoque == 0){
         throw new Exception("Le calcul a raté");
         // throw se comporte comme un return
-        }else{
-        return 43;
         }
+        return ageCoque;
     }
 
     public void setAgeCoque(int ageCoque) {
@@ -68,9 +81,7 @@ public class Bateau implements Comparable<Bateau> {
         this.etat = etat;
     }
 
-    public double getMilesParcourus() {
-        return milesParcourus;
-    }
+   
 
     public void setMilesParcourus(double milesParcourus) {
         this.milesParcourus = milesParcourus;
@@ -92,9 +103,7 @@ public class Bateau implements Comparable<Bateau> {
         this.moteur = moteur;
     }
 
-    public static int getNombreDeBateauxConstruits() {
-        return nombreDeBateauxConstruits;
-    }
+    
 
     public String getNom() {
         return nom;
