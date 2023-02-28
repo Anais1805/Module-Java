@@ -81,5 +81,11 @@ public class SimulationBateau {
 
         System.out.println(newBoat.getNom().compareTo(bateau2.getNom()));
 
+try{
+    int ageCoque = newBoat.getAgeCoque();
+    System.out.println("L'âge de la coque est = " + ageCoque);
+} catch (Exception monException){
+    System.out.println(monException.getMessage());
+}
     }
 }

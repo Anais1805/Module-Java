@@ -4,6 +4,19 @@ import simulateur.piece.Coque;
 import simulateur.piece.Moteur;
 
 public class Bateau implements Comparable<Bateau> {
+    public int getAgeCoque() throws Exception {
+        if(true){
+        throw new Exception("Le calcul a raté");
+        // throw se comporte comme un return
+        }else{
+        return 43;
+        }
+    }
+
+    public void setAgeCoque(int ageCoque) {
+        this.ageCoque = ageCoque;
+    }
+
     // On peut spécifier les éléments que l'on compare
     // En écrivant Comparable<Type>, ici Comparable<Bateau>
     // Bateau nous fait une erreur on peut la résoudre en implémentant
@@ -15,6 +28,7 @@ public class Bateau implements Comparable<Bateau> {
     private Coque coque;
     private Moteur moteur;
     private EtatBateau etat = EtatBateau.OPERATIONNEL;
+    private int ageCoque;
 
     // Ici, ce constructeur permet de construire un bateau en renseignant
     // directement son nom``
@@ -120,5 +134,7 @@ public class Bateau implements Comparable<Bateau> {
         int result = bateau.nom.compareTo(nom);
         return result;
     }
+
+    // public int getAgeCoque
 
 }
