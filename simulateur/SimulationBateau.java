@@ -79,5 +79,7 @@ public class SimulationBateau {
         Controleur nouveauControleur = new Controleur();
         nouveauControleur.controle(newBoat);
 
+        System.out.println(newBoat.getNom().compareTo(bateau2.getNom()));
+
     }
 }

@@ -2,6 +2,7 @@ package coursj5;
 
 import java.lang.management.MonitorInfo;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -111,7 +112,21 @@ public class Apresmidi {
     notes.get("Jean");
     System.out.println("Notes de Jean : " + notes.get("Jean"));
 
-    }
+    // collections :
+    Collections.max(maListInt);
+    System.out.println(Collections.max(maListInt));
+    List<String> motsMots = new ArrayList<String>();
+    motsMots.add("chocolat");
+    motsMots.add("vanille");
+    motsMots.add("caramel");
+    motsMots.add("noix de pécan");
 
-   
+   Collections.sort(motsMots);
+   System.out.println(motsMots);
+   Collections.reverse(motsMots);
+   System.out.println(motsMots);
+ 
+
+
+    }
 }
